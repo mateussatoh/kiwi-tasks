@@ -36,22 +36,95 @@ form {
   justify-content: center;
 }
 
+.add-task {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
 form input,
 form button {
   padding: 0.5rem;
   font-size: 2rem;
+  outline: none;
   border: none;
   background: white;
 }
 
 form button {
-  color: #cc5333;
+  color: #ff5100;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #cc5333;
+  background: #ff5100;
   color: white;
+}
+
+.tasks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks-list {
+  min-width: 40%;
+  list-style: none;
+}
+
+.task {
+  margin: 0.5rem 0 0.5rem 0;
+  background: #fff;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.task-item {
+  padding: 0 0.5rem;
+}
+
+.task li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.complete-btn {
+  background: rgb(20, 133, 30);
+}
+
+.restore-task {
+  background: #ffda29;
+}
+
+.fa-trash,
+.fa-check,
+.fa-arrow-left {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateX(1rem);
+  opacity: 0;
 }
